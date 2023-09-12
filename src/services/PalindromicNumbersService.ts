@@ -24,3 +24,5 @@ class PalindromicNumbersService {
     return numbers;
   }
 }
+
+export { PalindromicNumbersService };
