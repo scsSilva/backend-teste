@@ -16,3 +16,5 @@ class PalindromicNumbersController {
     }
   }
 }
+
+export { PalindromicNumbersController };
