@@ -21,7 +21,7 @@ class PalindromicNumbersService {
       }
     }
 
-    return numbers;
+    return { numbers };
   }
 }
 
