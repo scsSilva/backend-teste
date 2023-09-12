@@ -19,3 +19,5 @@ class CashFlowService {
     return { price, amountReceived, change, hundredNotes, notesOutOfTen, notesOutOfOne };
   }
 }
+
+export { CashFlowService };
