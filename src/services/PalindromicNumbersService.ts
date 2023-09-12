@@ -4,7 +4,7 @@ interface IPalindromicNumbersService {
 }
 
 class PalindromicNumbersService {
-  execute({ start, end }: IPalindromicNumbersService) {
+  listNumbersInRange({ start, end }: IPalindromicNumbersService) {
     const numbers = new Array<Number>;
 
     for (let index = start; index <= end; index++) {
