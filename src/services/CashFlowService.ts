@@ -4,7 +4,7 @@ interface ICashFlowService {
 }
 
 class CashFlowService {
-  execute({ price, amountReceived }: ICashFlowService) {
+  calculateChange({ price, amountReceived }: ICashFlowService) {
     let change = amountReceived - price;
 
     const hundredNotes = Math.trunc(change / 100);
