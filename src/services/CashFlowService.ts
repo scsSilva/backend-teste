@@ -1,10 +1,13 @@
-interface ICashFlowService {
-  price: number;
-  amountReceived: number;
-}
+import {
+  ICashFlowService,
+  ICashFlowServiceReturn,
+} from "../interfaces/ICashFlowService";
 
 class CashFlowService {
-  calculateChange({ price, amountReceived }: ICashFlowService) {
+  calculateChange({
+    price,
+    amountReceived,
+  }: ICashFlowService): ICashFlowServiceReturn {
     let change = amountReceived - price;
 
     const hundredNotes = Math.trunc(change / 100);
@@ -14,9 +17,16 @@ class CashFlowService {
     change %= 10;
 
     const notesOutOfOne = change;
-    change += (notesOutOfTen * 10) + (hundredNotes * 100);
+    change += notesOutOfTen * 10 + hundredNotes * 100;
 
-    return { price, amountReceived, change, hundredNotes, notesOutOfTen, notesOutOfOne };
+    return {
+      price,
+      amountReceived,
+      change,
+      hundredNotes,
+      notesOutOfTen,
+      notesOutOfOne,
+    };
   }
 }
 
