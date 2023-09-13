@@ -49,7 +49,7 @@ Para rodar a aplicação:
 >> yarn dev
 ```
 
-Para rodar os testes (json-server):
+Para rodar os testes:
 ```
 >> yarn test
 ```
