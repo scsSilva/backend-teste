@@ -1,4 +1,5 @@
-import express, { Application, json, urlencoded } from "express";
+import express, { Application, json } from "express";
+import "dotenv/config";
 import cors from "cors";
 import { routes } from "./routes";
 
@@ -8,6 +9,6 @@ app.use(json());
 app.use(cors());
 app.use(routes);
 
-app.listen(3005);
+app.listen(process.env.PORT || 3000);
 
 export default app;
