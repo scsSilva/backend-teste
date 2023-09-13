@@ -5,10 +5,13 @@ const palindromicNumbersService = new PalindromicNumbersService();
 
 class PalindromicNumbersController {
   list(req: Request, res: Response) {
-    const { start, end } = req.body;
+    const { start, end } = req.params;
 
     try {
-      const dataResponse = palindromicNumbersService.listNumbersInRange({ start, end });
+      const dataResponse = palindromicNumbersService.listNumbersInRange({
+        start: parseInt(start),
+        end: parseInt(end),
+      });
 
       return res.json(dataResponse);
     } catch (error) {
